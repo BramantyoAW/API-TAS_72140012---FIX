@@ -39,7 +39,7 @@ namespace API_TAS_72140012
             await Navigation.PushAsync(new TambahBarangPage());
         }
 
-        private async void BtnSearch_Clicked(object sender, EventArgs e)
+       private async void BtnSearch_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SearchPage());
         }

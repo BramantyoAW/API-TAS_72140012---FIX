@@ -19,20 +19,26 @@ namespace API_TAS_72140012
         {
             InitializeComponent();
 
-            //btnSearchBarang.Clicked += btnSearchBarang_Clicked;
-            //btnSearchKategori.Clicked += btnSearchKategori_Clicked;
+           btnSearchBarhang.Clicked += btnSearchBarang_Clicked;
+           btnSearchKathegori.Clicked += btnSearchKategori_Clicked;
         }
 
         protected override void OnAppearing()
         {
-            this.BindingContext = new BarangViewModel();
+            this.BindingContext = new SearchKategori("");
         }
 
-        //private void btnSearchBarang_Clicked(object sender, EventArgs e)
-        //{
-        //    this.BindingContext = new SearchKategori(txtSearchBar.Text);
-        //    txtSearchBar.Text = null;
-        //}
+        private void btnSearchBarang_Clicked(object sender, EventArgs e)
+        {
+            this.BindingContext = new SearchKategori(txtSearchBarhang.Text);
+            txtSearchBarhang.Text = null;
+        }
+
+        private void btnSearchKategori_Clicked(object sender, EventArgs e)
+        {
+            this.BindingContext = new SearchBarang(txtSearchKathegori.Text);
+            txtSearchKathegori.Text = null;
+        }
 
         //private void btnSearchKategori_Clicked(object sender, EventArgs e)
         //{

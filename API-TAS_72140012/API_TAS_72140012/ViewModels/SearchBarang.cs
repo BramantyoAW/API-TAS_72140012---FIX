@@ -19,18 +19,18 @@ namespace API_TAS_72140012.ViewModels
         private RestClient _client =
            new RestClient("http://72140012stok.azurewebsites.net/");
 
-        private ObservableCollection<Barang> listBarang;
-        public ObservableCollection<Barang> ListBarang
+        private ObservableCollection<Barang> listBarangVM;
+        public ObservableCollection<Barang> ListBarangVM
         {
-            get { return listBarang; }
-            set { listBarang = value; OnPropertyChanged("ListBarang"); }
+            get { return listBarangVM; }
+            set { listBarangVM = value; OnPropertyChanged("ListBarangVM"); }
         }
 
         private async void RefreshDataAsync(string NamaKategori)
         {
-            RestRequest _request = new RestRequest("api/viewbarkat?NamaKategori=" + NamaKategori, Method.GET);
+            RestRequest _request = new RestRequest("api/barang/?namaKategori=" + NamaKategori, Method.GET);
             var _response = await _client.Execute<List<Barang>>(_request);
-            ListBarang = new ObservableCollection<Barang>(_response.Data);
+            ListBarangVM = new ObservableCollection<Barang>(_response.Data);
         }
 
         public SearchBarang(string NamaKategori)
