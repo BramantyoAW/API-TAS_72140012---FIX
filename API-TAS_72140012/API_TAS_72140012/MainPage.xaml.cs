@@ -38,7 +38,7 @@ namespace API_TAS_72140012
             navigationDrawerList.ItemsSource = menuList;
 
             // Initial navigation, this can be used for our home page
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(BarangPageNew)));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(JenisMotorPage)));
         }
 
         // Event for Menu Item selection, here we are going to handle navigation based

@@ -2,16 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="API_TAS_72140012.EditJenisMotorPage">
-  <StackLayout>
-    <Label Text="ID"/>
+<ContentPage.Content>
+		<StackLayout>
+    <Label Text="ID" />
     <Entry x:Name="txtIdJenisMotor" IsEnabled="False" Text="{Binding IdJenisMotor}" />
-    <Label text="Nama JenisMotor" />
-    <Entry x:Name="txtNamaJenisMotor" Text="{Binding NamaJenisMotor}" />
-    <Label text="Nama Merk"/>
-    <Entry x:Name="txtNamaMerk" Text="{Binding NamaMerk}"/>
+    <Label Text="Nama Merek" />
+    <Entry x:Name="txtnamamerek" Text="{Binding NamaMerk}" />
+			 <Label Text="Nama Jenis Motor" />
+    <Entry x:Name="txtnamajenismotor" Text="{Binding NamaJenisMotor}" />
     <StackLayout Orientation="Horizontal">
-      <Button x:Name="btnEdit" Text="Edit"/>
-      <Button x:Name="btnDelete" Text="Delete"/>
+      <Button x:Name="btnEdit" Text="Edit" />
+      <Button x:Name="btnDelete" Text="Delete" />
     </StackLayout>
   </StackLayout>
+	</ContentPage.Content>
 </ContentPage>

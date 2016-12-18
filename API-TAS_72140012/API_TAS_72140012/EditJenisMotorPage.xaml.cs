@@ -21,9 +21,10 @@ namespace API_TAS_72140012
             btnDelete.Clicked += BtnDelete_Clicked;
         }
 
-        private RestClient _Client = new RestClient("http://72140012stok.azurewebsites.net/");
+        private RestClient _Client = 
+            new RestClient("http://72140012stok.azurewebsites.net/");
 
-        private async void BtnDelete_Clicked(Object sender, EventArgs e)
+        async void BtnDelete_Clicked(Object sender, EventArgs e)
         {
             var _request = new RestRequest("api/JenisMotor/{id}", Method.DELETE);
 
@@ -42,14 +43,14 @@ namespace API_TAS_72140012
             }
         }
 
-        private async void BtnEdit_Clicked(Object sender, EventArgs e)
+        async void BtnEdit_Clicked(Object sender, EventArgs e)
         {
             var _request = new RestRequest("api/JenisMotor", Method.PUT);
             var newJenisMotor = new JenisMotor
             {
                 IdJenisMotor = Convert.ToInt32(txtIdJenisMotor.Text),
-                NamaJenisMotor = txtNamaJenisMotor.Text,
-                NamaMerk = txtNamaMerk.Text
+                NamaJenisMotor = txtnamajenismotor.Text,
+                NamaMerk = txtnamamerek.Text
             };
 
             _request.AddBody(newJenisMotor);

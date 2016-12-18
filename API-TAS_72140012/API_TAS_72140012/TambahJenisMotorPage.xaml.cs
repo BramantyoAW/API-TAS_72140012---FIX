@@ -20,12 +20,16 @@ namespace API_TAS_72140012
             btnTambahJenisMotor.Clicked += BtnTambahJenisMotor_Clicked;
         }
 
-        private RestClient _client = new RestClient("http://72140012stok.azurewebsites.net/");
+        private RestClient _client = 
+            new RestClient("http://72140012stok.azurewebsites.net/");
 
         private async void BtnTambahJenisMotor_Clicked(object sender, EventArgs e)
         {
             var _request = new RestRequest("api/JenisMotor", Method.POST);
-            var newJenisMotor = new JenisMotor { NamaJenisMotor = txtNamaJenisMotor.Text , NamaMerk = txtNamaMerk.Text };
+            var newJenisMotor = new JenisMotor
+            { NamaJenisMotor = txtNamaJenisMotor.Text,
+                NamaMerk = txtNamaMerek.Text
+            };
             _request.AddBody(newJenisMotor);
             try
             {

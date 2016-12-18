@@ -2,11 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="API_TAS_72140012.TambahJenisMotorPage">
-  <StackLayout>
-    <Label Text="Masukkan Nama JenisMotor :" />
-    <Entry x:Name="txtNamaJenisMotor" PlaceHolder="insert nama jenis motor" />
-    <Label Text="Masukkan Nama Merk :" />
-    <Entry x:Name="txtNamaMerk" Placeholder="insert nama merk"/>
-    <Button x:Name="btnTambahJenisMotor" Text="Tambah" />
-  </StackLayout>
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="Masukan Nama Merek :" />
+      <Entry x:Name="txtNamaMerek" Placeholder="insert nama merek"/>
+      <Label Text="Masukan Nama Jenis Motor :" />
+      <Entry x:Name="txtNamaJenisMotor" Placeholder="insert nama jenis motor"/>
+      <Button x:Name="btnTambahJenisMotor" Text="Tambah" />
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
