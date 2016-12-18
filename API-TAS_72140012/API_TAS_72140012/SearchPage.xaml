@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="API_TAS_72140012.SearchPage" Title="Search">
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="Masukkan Nama Kategori :"/>
+      <Entry x:Name="txtSearch" Placeholder="Masukkan Nama Barang" />
+      <Button x:Name="btnSearch" Text="Search"/>
+      <ListView x:Name="listBarang" ItemSource="{Binding ListBarang}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              
+              <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="25,10,55,25">
+                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Vertical" >
+                  <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                    <Label Font="15">Nama Barang : </Label>
+                    <Label x:Name="lblnamaBarang" Font="Bold,15" Text="{Binding Nama}" HorizontalOptions="Start"/>
+                  </StackLayout>
+                </StackLayout>
+              </StackLayout>
+              
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

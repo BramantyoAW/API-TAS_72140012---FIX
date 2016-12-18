@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="API_TAS_72140012.BarangPage" Title="Barang">
+<ContentPage.Content>
+  <StackLayout>
+    <Button Text="Search" x:Name="btnSearch" />
+    <ListView x:Name="listBarang" ItemSource="{Binding ListBarang}" RowHeight="250">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+         <ViewCell>
+           <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="25,10,55,15">
+             <StackLayout HorizontalOptions="StartAndExpand" Orientation="Vertical" >
+               <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                <Label HorizontalOptions="Start" Font="8" FontAttributes="Italic" Text="{Binding KodeBarang}"/>
+                <Label HorizontalOptions="Start" Font="8"  Text="{Binding IdJenisMotor}"/>
+                <Label HorizontalOptions="Start" Font="8"  Text="{Binding KategoriId}"/>
+                <Label HorizontalOptions="Start" Font="8"  Text="{Binding Nama}"/>
+               </StackLayout>
+               <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                <Label HorizontalOptions="Start" Font="8"  Text="{Binding Stok}"/>
+                <Label HorizontalOptions="Start" Font="8"  Text="{Binding HargaBeli}"/>
+                <Label HorizontalOptions="Start" Font="8"  Text="{Binding HargaJual}"/>
+                <Label HorizontalOptions="Start" Font="8"  Text="{Binding TanggalBeli}"/>
+               </StackLayout>
+             </StackLayout>
+           </StackLayout>
+           
+      
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    <Button Text="Tambah Barang" x:Name="btnTambah" />
+  </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

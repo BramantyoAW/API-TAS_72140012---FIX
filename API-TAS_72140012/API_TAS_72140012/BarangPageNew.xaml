@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="API_TAS_72140012.BarangPageNew" Title="Barang" >
+ <ContentPage.Content>
+  <StackLayout>
+    <Button Text="Search" x:Name="btnSearch" />
+    <ListView x:Name="listBarang" ItemsSource="{Binding ListBarang}" RowHeight="100" HasUnevenRows="True">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout HorizontalOptions="StartAndExpand" Orientation="Vertical" Padding="25,10,55,15">
+              <Label HorizontalOptions="Start" FontSize="15" FontAttributes="Italic" Text="{Binding KodeBarang}"/>
+              <Label HorizontalOptions="Start" FontSize="15" Text="{Binding IdJenisMotor}" />
+              <Label HorizontalOptions="Start" FontSize="15" Text="{Binding Nama}" />
+              <Label HorizontalOptions="Start" FontSize="15" Text="{Binding Stok}" />
+              <Label HorizontalOptions="Start" FontSize="15" Text="{Binding HargaBeli}" />
+              <Label HorizontalOptions="Start" FontSize="15" Text="{Binding HargaJual}" />
+              <Label HorizontalOptions="Start" FontSize="15" Text="{Binding TanggalBeli}" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    <Button Text="Tambah Barang" x:Name="btnTambah" />
+  </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
