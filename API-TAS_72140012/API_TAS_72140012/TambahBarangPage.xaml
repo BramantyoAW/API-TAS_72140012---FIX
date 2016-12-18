@@ -5,12 +5,11 @@
   <StackLayout>
     <Entry x:Name="txtKodeBarang" Placeholder="Masukkan Kode Barang" />
     <Entry x:Name="txtKategoriId" Placeholder="Masukkan Id Kategori" />
-    <!--<Entry x:Name="txtIdJenisMotor" Placeholder="Masukkan Id Jenis Motor" /> -->
+    <Entry x:Name="txtIdJenisMotor" Placeholder="Masukkan Id Jenis Motor" />
     <Entry x:Name="txtNama" Placeholder="Masukkan Nama" />
     <Entry x:Name="txtStok" Placeholder="Masukkan Stok" />
     <Entry x:Name="txtHargaBeli" Placeholder="Masukkan Harga Beli" />
     <Entry x:Name="txtHargaJual" Placeholder="Masukkan Harga Jual" />
-    <DatePicker x:Name="txtTanggalBeli"/>
     <Button x:Name="btnTambahBarang" Text="Tambah Barang"/>
   </StackLayout>
 </ContentPage>
